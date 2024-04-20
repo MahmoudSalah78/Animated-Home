@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Chilanka&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Chilanka", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+body{
+    background-color: black;
+}
+main{
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:22px;
+}
+.static{
+    transform: translateY(5px);
+}
+.h1-container{
+    color: white;
+    display: flex;
+    gap: 5px;
+    animation: x 2s ease;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.animated{
+    background-color: #3f2bf3;
+    padding-inline: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+
+}
+.animated h1{
+    animation: x 2s cubic-bezier(0,.81,.13,1.01);
+    transform: translateY(5px);
+}
+@keyframes x{
+    from{transform: translateX(-6rem);}
+    top{transform: translateX(0rem);}
+}
+.p-container{
+    overflow: hidden;
+}
+p{
+    color: white;
+    font-size: 20px;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+    animation: y 2s cubic-bezier(0,.81,.13,1.01);
+}
+@keyframes y{
+    from{transform: translatey(10rem);}
+    top{transform: translatey(0rem);}
+}
+button{
+    background:none;
+    color: white;
+    border: 2px solid #3f2bf3;
+    font-size: 1rem;
+    font-family: sans-serif;
+    padding: 0 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    animation: y 1s ease;
+}
+button:hover{
+    background-color: #3f2bf3;
+}
+.circle{
+    width: 28rem;
+    height: 28rem;
+    border-right: 5px solid #3f2bf3;
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    animation: rotate cubic-bezier(0,.81,.13,1.01) 3s;
+}
+@keyframes rotate{
+    from{
+        rotate: 720deg;
+        opacity: 0;
+    }
+}
+/* تغيير حجم main عندما يكون عرض الشاشة أصغر من 570px */
+@media screen and (max-width: 570px) {
+    main {
+      /* تحديد عرض main الجديد */
+      width: 90%;
+      margin: auto; /* لتوسيط main */
+    }
+  
+    /* تغيير حجم العناصر داخل .h1-container عندما يكون عرض الشاشة أصغر من 570px */
+    .h1-container h1.static {
+      font-size: 24px; /* حجم النص */
+    }
+  
+    .h1-container .animated h1 {
+      font-size: 24px; /* حجم النص */
+    }
+  
+    /* تغيير حجم النص داخل .p-container عندما يكون عرض الشاشة أصغر من 570px */
+    .p-container p {
+      font-size: 16px; /* حجم النص */
+    }
+    .circle{
+        width: 20rem;
+        height: 20rem;
+    }
+  }
+  
