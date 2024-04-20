@@ -75,8 +75,8 @@ button:hover{
     background-color: #3f2bf3;
 }
 .circle{
-    width: 28rem;
-    height: 28rem;
+    width: 25rem;
+    height: 25rem;
     border-right: 5px solid #3f2bf3;
     position: absolute;
     border-radius: 50%;
