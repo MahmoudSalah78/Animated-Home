@@ -8,6 +8,7 @@
 }
 body{
     background-color: black;
+    overflow: hidden;
 }
 main{
 
@@ -30,7 +31,7 @@ main{
     font-family: sans-serif;
 }
 .animated{
-    background-color: #3f2bf3;
+    background-color: #e64b0d;
     padding-inline: 20px;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -62,7 +63,7 @@ p{
 button{
     background:none;
     color: white;
-    border: 2px solid #3f2bf3;
+    border: 2px solid #e64b0d;
     font-size: 1rem;
     font-family: sans-serif;
     padding: 0 10px;
@@ -72,12 +73,12 @@ button{
     animation: y 1s ease;
 }
 button:hover{
-    background-color: #3f2bf3;
+    background-color: #e64b0d;
 }
 .circle{
     width: 25rem;
     height: 25rem;
-    border-right: 5px solid #3f2bf3;
+    border-right: 5px solid #e64b0d;
     position: absolute;
     border-radius: 50%;
     z-index: -1;
@@ -89,6 +90,25 @@ button:hover{
         opacity: 0;
     }
 }
+.move {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: 0.5s cubic-bezier(.48,.03,.96,.86); /* تحديد انتقال الشفافية */
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:22px;
+}
+.bn45 {
+    width: 170px;
+    height: 50px;
+  }
+
 /* تغيير حجم main عندما يكون عرض الشاشة أصغر من 570px */
 @media screen and (max-width: 570px) {
     main {
